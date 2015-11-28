@@ -1,3 +1,9 @@
+# 1.0.5 (2015-11-27)
+
+## Features
+- hide picker for readonly or disabled inputs
+
+
 # 1.0.4 (2015-08-02)
 
 ## Bug Fixes

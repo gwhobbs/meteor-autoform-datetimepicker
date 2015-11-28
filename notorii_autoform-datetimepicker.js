@@ -20,6 +20,7 @@ var afDatetimepicker ={
 
   setup: function(instid, elm, template, params) {
     var self =this;
+    console.log(template.data.atts);
 
     var sessKeys =self.formSessKeys(instid, {});
     //default - so it is defined
@@ -62,6 +63,14 @@ var afDatetimepicker ={
       OPTS[instid].pikaday.onSelect =function() {
         VAL[instid] =this.getMoment().format(OPTS[instid].pikaday.format);
       };
+
+      // If readonly or disabled, create a hidden element to attach trigger to for preventing changing value
+      if(template.data.atts.readonly !==undefined || template.data.atts.disabled !==undefined) {
+        var input =document.createElement("input");
+        input.type ="hidden";
+        elm.parentNode.appendChild(input);
+        OPTS[instid].pikaday.trigger =input;
+      }
 
       picker = new Pikaday(OPTS[instid].pikaday);
       template.picker.set(picker);
