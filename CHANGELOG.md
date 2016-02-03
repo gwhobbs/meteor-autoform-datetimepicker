@@ -1,3 +1,9 @@
+# 1.0.6 (2015-11-27)
+
+# Features
+- remove debugging console.log
+
+
 # 1.0.5 (2015-11-27)
 
 ## Features

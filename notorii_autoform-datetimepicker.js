@@ -20,7 +20,6 @@ var afDatetimepicker ={
 
   setup: function(instid, elm, template, params) {
     var self =this;
-    console.log(template.data.atts);
 
     var sessKeys =self.formSessKeys(instid, {});
     //default - so it is defined
